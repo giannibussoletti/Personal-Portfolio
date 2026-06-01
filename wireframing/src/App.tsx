@@ -1,18 +1,32 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Container, Row, Col, Image, Card, Button, Accordion } from "react-bootstrap"
 const iconArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const socialArray: number[] = [1, 2, 3, 4]
 const ProjectArray: number[] = [1, 2, 3, 4, 5]
 
 const App = () => {
   return (
     <div data-bs-theme="dark" className="bg-dark text-white">
       <main>
-        <Container>
+        <Container fluid>
           <Row className="mb-5">
-            <Col className="vh-100 d-flex justify-content-center align-items-center" xs={12}>
-              <h1 className="text-uppercase text-center mb-5">gianni bussoletti</h1>
+            <Col
+              className="vh-100 d-flex flex-column justify-content-center align-items-center"
+              xs={12}>
+              <h1
+                className="text-uppercase text-center mb-2 fw-bolder"
+                style={{ fontSize: "5rem" }}>
+                gianni bussoletti
+              </h1>
+              <div>
+                {socialArray.map((icon) => (
+                  <Image key={icon} className="mx-3" src="https://placebear.com/40/40" />
+                ))}
+              </div>
             </Col>
           </Row>
+        </Container>
+        <Container>
           <Row className="mb-5 px-5">
             <Col xs="auto" className="me-5">
               <Image src="https://placebear.com/200/200" className="rounded-circle" />
