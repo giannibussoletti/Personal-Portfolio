@@ -12,7 +12,8 @@ import {
   faSquareJs,
   faTypescript,
 } from "@fortawesome/free-brands-svg-icons"
-import type { StackIconTypes } from "../types"
+import type { LanguageArrayType, SocialLinkIconTypes, StackIconTypes } from "../types"
+import { faEnvelope, faLeaf } from "@fortawesome/free-solid-svg-icons"
 
 export const stackIconFront: StackIconTypes[] = [
   { icon: faHtml5, value: "HTML5" },
@@ -33,4 +34,7 @@ export const stackIconBack: StackIconTypes[] = [
 export const socialIcon: StackIconTypes[] = [
   { icon: faLinkedin, value: "Linkedin" },
   { icon: faGithub, value: "GitHub" },
+export const arrayLang: LanguageArrayType[] = [
+  { code: "it", name: "Italiano", flag: "🇮🇹" },
+  { code: "en", name: "English", flag: "🇬🇧" },
 ]
