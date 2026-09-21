@@ -6,8 +6,6 @@ import { far } from "@fortawesome/free-regular-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 library.add(fas, far, fab)
 
-import "./assets/css/style.scss"
-
 import { Container, Row, Col, Image, Tooltip, OverlayTrigger, Button, Card } from "react-bootstrap"
 
 import { useTranslation } from "react-i18next"
@@ -38,10 +36,18 @@ const App = () => {
             <h2>Full-Stack Junior Developer</h2>
             {socialIcon.map((social, i) => {
               return (
-                <Col key={stackIcon.value + i} className="mb-3">
-                  <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} />
-                  {stackIcon.value}
-                </Col>
+                <OverlayTrigger
+                  key={social.value + i}
+                  overlay={renderTooltip(social.value)}
+                  delay={{ show: 250, hide: 400 }}
+                  placement="bottom">
+                  <FontAwesomeIcon
+                    onClick={() => window.open(social.url)}
+                    className="mt-1 mb-4 hand-cursor"
+                    size={iconSize}
+                    icon={social.icon}
+                  />
+                </OverlayTrigger>
               )
             })}
             <p className="text-start">{t("profile.description")}</p>
@@ -60,10 +66,23 @@ const App = () => {
               {stackIconFront.map((stackIcon, i) => {
                 return (
                   <Col key={stackIcon.value + i} className="mb-3">
-                    <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} flip="horizontal" />
+                    <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} />
                     {stackIcon.value}
                   </Col>
-                ) : (
+                )
+              })}
+            </Row>
+          </Col>
+
+          <Col className="mb-4 mb-sm-0 window-style">
+            <Row className="window-title mb-3">
+              <Col>
+                <h3>Back-End Stack</h3>
+              </Col>
+            </Row>
+            <Row xs={2}>
+              {stackIconBack.map((stackIcon, i) => {
+                return (
                   <Col key={stackIcon.value + i} className="mb-3">
                     <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} />
                     {stackIcon.value}
