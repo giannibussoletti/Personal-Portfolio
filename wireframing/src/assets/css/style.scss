@@ -8,6 +8,8 @@
 
 body {
   font-family: "Space Mono", monospace;
+  background-color: #006d6f;
+  color: #000;
 }
 
 h1 {
@@ -22,11 +24,30 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
+  margin: 0.5rem 0;
 }
 
 .project-title {
   font-size: 1.8rem;
   font-weight: 700;
+}
+
+.hand-cursor {
+  cursor: pointer;
+}
+
+.window-title {
+  background-color: #000080;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 0;
+  color: white;
+}
+
+.window-style {
+  border: 2px outset #fff;
+  background-color: #c0c0c0;
+  color: #000;
 }

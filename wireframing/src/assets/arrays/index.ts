@@ -27,13 +27,16 @@ export const stackIconFront: StackIconTypes[] = [
 
 export const stackIconBack: StackIconTypes[] = [
   { icon: faJava, value: "Java" },
-  { icon: faEnvira, value: "Spring Boot" },
+  { icon: faLeaf, value: "Spring Boot" },
   { icon: faPostgresql, value: "PostgreSQL" },
 ]
 
-export const socialIcon: StackIconTypes[] = [
-  { icon: faLinkedin, value: "Linkedin" },
-  { icon: faGithub, value: "GitHub" },
+export const socialIcon: SocialLinkIconTypes[] = [
+  { icon: faLinkedin, value: "Linkedin", url: "https://linkedin.com/in/giannibussoletti/" },
+  { icon: faGithub, value: "GitHub", url: "https://github.com/giannibussoletti" },
+  { icon: faEnvelope, value: "Mail", url: "mailto:info@giannibussoletti.it" },
+]
+
 export const arrayLang: LanguageArrayType[] = [
   { code: "it", name: "Italiano", flag: "🇮🇹" },
   { code: "en", name: "English", flag: "🇬🇧" },
