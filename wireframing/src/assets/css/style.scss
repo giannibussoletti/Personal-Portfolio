@@ -1,0 +1,32 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+@import "bootstrap/scss/bootstrap.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+  font-family: "Space Mono", monospace;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
