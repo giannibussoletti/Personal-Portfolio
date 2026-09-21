@@ -14,3 +14,8 @@ export type LanguageArrayType = {
   name: string
   flag: string
 }
+
+export type StackComponentType = {
+  array: StackIconTypes[]
+  title: string
+}

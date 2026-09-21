@@ -14,6 +14,7 @@ import { socialIcon, stackIconBack, stackIconFront } from "./assets/arrays"
 import { iconSize } from "./assets/variables"
 
 import LangSwitcher from "./assets/components/LangSwitcher"
+import StackWindow from "./assets/components/StackWindow"
 
 const renderTooltip = (value: string) => {
   return <Tooltip>{value}</Tooltip>
@@ -55,42 +56,9 @@ const App = () => {
           </Col>
         </Row>
 
-        <Row xs={1} sm={2} className="mb-4 mt-3">
-          <Col className="mb-4 mb-sm-0 window-style">
-            <Row className="window-title">
-              <Col>
-                <h3>Front-End Stack</h3>
-              </Col>
-            </Row>
-            <Row xs={2}>
-              {stackIconFront.map((stackIcon, i) => {
-                return (
-                  <Col key={stackIcon.value + i} className="mb-3">
-                    <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} />
-                    {stackIcon.value}
-                  </Col>
-                )
-              })}
-            </Row>
-          </Col>
-
-          <Col className="mb-4 mb-sm-0 window-style">
-            <Row className="window-title mb-3">
-              <Col>
-                <h3>Back-End Stack</h3>
-              </Col>
-            </Row>
-            <Row xs={2}>
-              {stackIconBack.map((stackIcon, i) => {
-                return (
-                  <Col key={stackIcon.value + i} className="mb-3">
-                    <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} />
-                    {stackIcon.value}
-                  </Col>
-                )
-              })}
-            </Row>
-          </Col>
+        <Row xs={1} md={2} className="mb-4 mt-3">
+          <StackWindow array={stackIconFront} title="Front-End Stack" />
+          <StackWindow array={stackIconBack} title="Back-End Stack" />
         </Row>
 
         <Row className="mt-3">
