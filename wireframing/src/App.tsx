@@ -1,95 +1,151 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fas } from "@fortawesome/free-solid-svg-icons"
+import { far } from "@fortawesome/free-regular-svg-icons"
+
+library.add(fas, far, fab)
+
 import "bootstrap/dist/css/bootstrap.min.css"
-import { Container, Row, Col, Image, Card, Button, Accordion } from "react-bootstrap"
-const iconArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const socialArray: number[] = [1, 2, 3, 4]
-const ProjectArray: number[] = [1, 2, 3, 4, 5]
+import {
+  Container,
+  Row,
+  Col,
+  Image,
+  Tooltip,
+  OverlayTrigger,
+  Button,
+  Card,
+  Modal,
+} from "react-bootstrap"
+import { socialIcon, stackIconBack, stackIconFront } from "./assets/arrays"
+import { fab, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { iconSize } from "./assets/variables"
+import { useState } from "react"
+
+const renderTooltip = (value: string) => {
+  return <Tooltip>{value}</Tooltip>
+}
 
 const App = () => {
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+
   return (
-    <div data-bs-theme="dark" className="bg-dark text-white">
-      <main>
-        <Container fluid>
-          <Row className="mb-5">
-            <Col
-              className="vh-100 d-flex flex-column justify-content-center align-items-center"
-              xs={12}>
-              <h1
-                className="text-uppercase text-center mb-2 fw-bolder"
-                style={{ fontSize: "5rem" }}>
-                gianni bussoletti
-              </h1>
-              <div>
-                {socialArray.map((icon) => (
-                  <Image key={icon} className="mx-3" src="https://placebear.com/40/40" />
-                ))}
-              </div>
+    <Container className="mt-5">
+      <Row>
+        <Col className="d-flex justify-content-center">
+          <Image roundedCircle src="https://placehold.co/150" />
+        </Col>
+      </Row>
+      <Row>
+        <Col className="text-center">
+          <h1>Gianni Bussoletti</h1>
+          <h2>Full-Stack Developer Jr.</h2>
+          {socialIcon.map((social, i) => {
+            return (
+              <OverlayTrigger
+                key={social.value + i}
+                overlay={renderTooltip(social.value)}
+                delay={{ show: 250, hide: 400 }}
+                placement="bottom">
+                <FontAwesomeIcon size={iconSize} icon={social.icon} />
+              </OverlayTrigger>
+            )
+          })}
+        </Col>
+      </Row>
+
+      <Row>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi minima rerum laboriosam
+          quod rem? Ut quisquam iste eaque suscipit aliquid cumque! Aliquam earum inventore
+          asperiores ut illum ipsum architecto quasi?
+        </p>
+      </Row>
+      <Row xs={1} sm={2}>
+        <Col>
+          <h3>Front-End Stack</h3>
+          {stackIconFront.map((stackIcon, i) => {
+            return (
+              <OverlayTrigger
+                key={stackIcon.value + i}
+                overlay={renderTooltip(stackIcon.value)}
+                delay={{ show: 250, hide: 400 }}
+                placement="bottom">
+                <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} />
+              </OverlayTrigger>
+            )
+          })}
+        </Col>
+        <Col>
+          <h3>Back-End Stack</h3>
+          {stackIconBack.map((stackIcon, i) => {
+            return (
+              <OverlayTrigger
+                key={stackIcon.value + i}
+                overlay={renderTooltip(stackIcon.value)}
+                delay={{ show: 250, hide: 400 }}
+                placement="bottom">
+                {stackIcon.value === "Spring Boot" ? (
+                  <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} flip="horizontal" />
+                ) : (
+                  <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} />
+                )}
+              </OverlayTrigger>
+            )
+          })}
+        </Col>
+      </Row>
+      <Row>
+        <h3>Progetti</h3>
+        {stackIconBack.map(() => {
+          return (
+            <Col xs={12} md={4} className="mb-4">
+              <Card>
+                <Card.Img variant="top" src="https://placehold.co/160x90" />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Row xs={3} md={1} lg={3}>
+                    <Col className="mb-3 p-0 px-1">
+                      <Button className="w-100" variant="primary">
+                        Repo
+                      </Button>
+                    </Col>
+                    <Col className="mb-3 p-0 px-1">
+                      <Button className="w-100" variant="primary">
+                        Demo
+                      </Button>
+                    </Col>
+                    <Col className="mb-3 p-0 px-1">
+                      <Button className="w-100" variant="primary" onClick={handleShow}>
+                        info
+                      </Button>
+                    </Col>
+                  </Row>
+                </Card.Body>
+              </Card>
             </Col>
-          </Row>
-        </Container>
-        <Container>
-          <Row className="mb-5 px-5">
-            <Col xs="auto" className="me-5">
-              <Image src="https://placebear.com/200/200" className="rounded-circle" />
-            </Col>
-            <Col>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum cumque debitis quasi
-                placeat animi suscipit vel consequuntur sequi voluptatibus perspiciatis. Tempora
-                laboriosam soluta totam a maxime quas, consequatur repellat odio! Lorem ipsum dolor
-                sit amet consectetur adipisicing elit. Velit aperiam minus odio eius quia magnam
-                iure! Assumenda, nihil, harum minima vel repudiandae quod adipisci repellat porro
-                nesciunt nam sequi debitis?
-              </p>
-              {iconArray.map((icon) => (
-                <Image key={icon} className="me-2" src="https://placebear.com/40/40" />
-              ))}
-            </Col>
-          </Row>
-          <Row className="mb-5" xs={1} sm={2} lg={5}>
-            {ProjectArray.map((prj) => {
-              return (
-                <Col key={prj}>
-                  <Card>
-                    <Card.Img variant="top" src="https://placebear.com/286/180" />
-                    <Card.Body>
-                      <Card.Title>Card Title</Card.Title>
-                      <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                      </Card.Text>
-                      <Button variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              )
-            })}
-          </Row>
-          <Row className="mb-5">
-            <h2>Principali esperienze lavorative</h2>
-            <Accordion>
-              {ProjectArray.map((prj, i) => {
-                return (
-                  <Accordion.Item key={prj} eventKey={`${i}`}>
-                    <Accordion.Header>Accordion Item #1</Accordion.Header>
-                    <Accordion.Body>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                      in culpa qui officia deserunt mollit anim id est laborum.
-                    </Accordion.Body>
-                  </Accordion.Item>
-                )
-              })}
-            </Accordion>
-          </Row>
-        </Container>
-      </main>
-      <footer>
-        <p className="text-center mb-0">ciao sono un wireframe</p>
-      </footer>
-    </div>
+          )
+        })}
+      </Row>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </Container>
   )
 }
 
