@@ -1,7 +1,6 @@
 import {
   faBootstrap,
   faCss,
-  faEnvira,
   faGithub,
   faHtml5,
   faJava,
