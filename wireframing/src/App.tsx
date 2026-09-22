@@ -16,6 +16,7 @@ import { iconSize } from "./assets/variables"
 import LangSwitcher from "./assets/components/LangSwitcher"
 import StackWindow from "./assets/components/StackWindow"
 import WindowButtons from "./assets/components/WindowButtons"
+import ProjectCard from "./assets/components/ProjectCard"
 
 const renderTooltip = (value: string) => {
   return <Tooltip>{value}</Tooltip>
@@ -81,30 +82,7 @@ const App = () => {
         <Row className="mt-3">
           <h3 className="project-title">{t("titles.project")}</h3>
           {stackIconBack.map((pr, i) => {
-            return (
-              <Col xs={12} lg={4} className="mb-4" key={i}>
-                <Card className="window-style rounded-0">
-                  <Card.Header className="p-2 window-title rounded-0 d-flex justify-content-between align-items-center">
-                    <div className=" fs-6 text-uppercase">Card Header</div> <WindowButtons />
-                  </Card.Header>
-                  <Card.Img className="rounded-0" src="https://placehold.co/160x90" />
-                  <Card.Footer>
-                    <Row xs={2} className=" justify-content-center">
-                      <Col className="my-2 p-0 px-1">
-                        <Button variant="light" className="w-100 btn-projects">
-                          Repo
-                        </Button>
-                      </Col>
-                      <Col className="my-2 p-0 px-1">
-                        <Button variant="light" className="w-100 btn-projects">
-                          Demo
-                        </Button>
-                      </Col>
-                    </Row>
-                  </Card.Footer>
-                </Card>
-              </Col>
-            )
+            return <ProjectCard key={i} />
           })}
         </Row>
       </Container>
