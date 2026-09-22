@@ -7,6 +7,11 @@ export default {
       "profile.quote": "Amo le storie ben raccontate, sullo schermo come nel codice",
 
       "titles.project": "progetti",
+
+      "footer.gotIdea": "Hai un progetto? Parliamone!",
+      "footer.contactMe": "Contattami!",
+      "footer.madeWith":
+        "Portfolio realizzato con <strong>React</strong>,<strong>TypeScript</strong> e <strong>Bootstrap</strong>.",
     },
   },
 }
