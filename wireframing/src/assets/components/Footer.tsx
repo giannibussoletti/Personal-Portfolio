@@ -35,10 +35,10 @@ const Footer = () => {
           <Col
             xs={12}
             sm={6}
-            className=" mt-3 my-sm-0 d-flex flex-column align-items-sm-center justify-content-sm-center flex-lg-row">
+            className="mt-3 my-sm-0 d-flex flex-column align-items-sm-center justify-content-sm-center flex-lg-row">
             {socialIcon.slice(0, 2).map((social) => {
               return (
-                <div className="me-lg-3">
+                <div className="me-lg-3" key={social.value}>
                   <FontAwesomeIcon icon={social.icon} />
                   <a href={social.url}>{social.value}</a>
                 </div>

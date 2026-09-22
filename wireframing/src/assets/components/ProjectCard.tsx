@@ -3,7 +3,7 @@ import WindowButtons from "./WindowButtons"
 
 const ProjectCard = () => {
   return (
-    <Col xs={12} lg={4} className="mb-4">
+    <Col xs={12} lg={4} className="mb-4 mb-lg-0">
       <Card className="window-style rounded-0">
         <Card.Header className="p-2 window-title rounded-0 d-flex justify-content-between align-items-center">
           <div className=" fs-6 text-uppercase">Card Header</div> <WindowButtons />
