@@ -6,7 +6,7 @@ import { far } from "@fortawesome/free-regular-svg-icons"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 library.add(fas, far, fab)
 
-import { Container, Row, Col, Image, Tooltip, OverlayTrigger, Button, Card } from "react-bootstrap"
+import { Container, Row, Col, Image, Tooltip, OverlayTrigger } from "react-bootstrap"
 
 import { useTranslation } from "react-i18next"
 
@@ -82,7 +82,7 @@ const App = () => {
 
         <Row className="mt-3">
           <h3 className="project-title">{t("titles.project")}</h3>
-          {stackIconBack.map((pr, i) => {
+          {stackIconBack.map((_pr, i) => {
             return <ProjectCard key={i} />
           })}
         </Row>
