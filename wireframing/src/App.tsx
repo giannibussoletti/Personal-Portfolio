@@ -80,12 +80,19 @@ const App = () => {
           <StackWindow array={stackIconBack} title="Back-End Stack" />
         </Row>
 
-        <Row className="mt-3">
-          <h3 className="project-title">{t("titles.project")}</h3>
-          {stackIconBack.map((_pr, i) => {
-            return <ProjectCard key={i} />
-          })}
-        </Row>
+        <Col className="window-style p-0 mb-4">
+          <Row className="window-title m-0">
+            <Col className="d-flex align-items-center justify-content-between">
+              <h3>{t("titles.project")}</h3>
+              <WindowButtons />
+            </Col>
+          </Row>
+          <Row className="window-bg p-3 m-0">
+            {stackIconBack.map((_pr, i) => {
+              return <ProjectCard key={i} />
+            })}
+          </Row>
+        </Col>
         <Footer />
       </Container>
     </>

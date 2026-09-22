@@ -19,6 +19,7 @@ const LangSwitcher = () => {
           {arrayLang.map((lang) => {
             return (
               <Button
+                key={lang.name}
                 aria-label={lang.name}
                 className="p-0 mx-1 bg-transparent border-0 fs-3"
                 onClick={() => {
