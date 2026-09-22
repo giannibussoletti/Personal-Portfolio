@@ -33,7 +33,7 @@ export const stackIconBack: StackIconTypes[] = [
 export const socialIcon: SocialLinkIconTypes[] = [
   { icon: faLinkedin, value: "Linkedin", url: "https://linkedin.com/in/giannibussoletti/" },
   { icon: faGithub, value: "GitHub", url: "https://github.com/giannibussoletti" },
-  { icon: faEnvelope, value: "Mail", url: "mailto:info@giannibussoletti.it" },
+  { icon: faEnvelope, value: "info@giannibussoletti.it", url: "mailto:info@giannibussoletti.it" },
 ]
 
 export const arrayLang: LanguageArrayType[] = [

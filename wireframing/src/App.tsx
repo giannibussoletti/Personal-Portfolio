@@ -16,6 +16,7 @@ import { iconSize } from "./assets/variables"
 import LangSwitcher from "./assets/components/LangSwitcher"
 import StackWindow from "./assets/components/StackWindow"
 import WindowButtons from "./assets/components/WindowButtons"
+import Footer from "./assets/components/Footer"
 import ProjectCard from "./assets/components/ProjectCard"
 
 const renderTooltip = (value: string) => {
@@ -27,7 +28,7 @@ const App = () => {
   return (
     <>
       <LangSwitcher />
-      <Container className="mt-5 px-3">
+      <Container className="mt-5 px-3 mb-5">
         <Row>
           <Col className="d-flex justify-content-center mb-4">
             <Image
@@ -85,6 +86,7 @@ const App = () => {
             return <ProjectCard key={i} />
           })}
         </Row>
+        <Footer />
       </Container>
     </>
   )
