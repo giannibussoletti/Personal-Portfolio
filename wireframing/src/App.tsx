@@ -27,7 +27,7 @@ const App = () => {
   return (
     <>
       <LangSwitcher />
-      <Container className="mt-5 px-3">
+      <Container className="mt-5 px-3 mb-5">
         <Row>
           <Col className="d-flex justify-content-center mb-4">
             <Image

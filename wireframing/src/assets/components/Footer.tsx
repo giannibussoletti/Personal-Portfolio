@@ -13,31 +13,44 @@ const Footer = () => {
             <WindowButtons />
           </Col>
         </Row>
-        <Row className="window-bg py-3 m-0">
-          <Col xs={12} sm={6} className="mb-3 d-xl-flex align-items-center">
-            <p className="m-0 me-xl-3 mb-2 mb-xl-0">Hai un progetto in mente?</p>
+        <Row className="window-bg p-3 m-0">
+          <Col
+            xs={12}
+            sm={6}
+            className="d-block d-sm-flex flex-column flex-xl-row justify-content-center align-items-center">
+            <p className="mb-2 mb-xl-0 pe-lg-2 text-sm-center text-lg-start">
+              Hai un progetto? Parliamone!
+            </p>
             <Button
               variant="light"
               className="btn-projects"
               onClick={() => window.open(socialIcon[2].url)}>
-              <Image className="me-2" src="./contact.png" style={{ maxWidth: "35px" }} />
+              <Image src="./contact.png" style={{ maxWidth: "35px" }} />
               <span>Contattami!</span>
             </Button>
           </Col>
-          <Col xs={12} sm={6} className="mb-3 my-sm-0">
+          <Col
+            xs={12}
+            sm={6}
+            className=" mt-3 my-sm-0 d-flex flex-column align-items-sm-center justify-content-sm-center flex-lg-row">
             {socialIcon.slice(0, 2).map((social) => {
               return (
-                <div>
+                <div className="me-lg-3">
                   <FontAwesomeIcon icon={social.icon} />
-                  <a href={social.url}>{social.value} </a>
+                  <a href={social.url}>{social.value}</a>
                 </div>
               )
             })}
           </Col>
-          <Col xs={12}>
+          <Col xs={12} className="mt-3 d-lg-flex justify-content-lg-center">
+            <p className="mb-0 me-lg-3">
+              Portfolio realizzato con <strong>React</strong>,<strong>TypeScript</strong> e{" "}
+              <strong>Bootstrap</strong>.
+            </p>
             <p className="mb-0">
-              Gianni Bussoletti — Portfolio realizzato con <strong>React</strong>,
-              <strong>TypeScript</strong> e <strong>Bootstrap</strong>.
+              Gianni Bussoletti –{" "}
+              <span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>&#169; </span>
+              {new Date().getFullYear().toString()}
             </p>
           </Col>
         </Row>
