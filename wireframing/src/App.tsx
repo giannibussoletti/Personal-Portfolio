@@ -16,6 +16,7 @@ import { iconSize } from "./assets/variables"
 import LangSwitcher from "./assets/components/LangSwitcher"
 import StackWindow from "./assets/components/StackWindow"
 import WindowButtons from "./assets/components/WindowButtons"
+import Footer from "./assets/components/Footer"
 
 const renderTooltip = (value: string) => {
   return <Tooltip>{value}</Tooltip>
@@ -107,6 +108,7 @@ const App = () => {
             )
           })}
         </Row>
+        <Footer />
       </Container>
     </>
   )
