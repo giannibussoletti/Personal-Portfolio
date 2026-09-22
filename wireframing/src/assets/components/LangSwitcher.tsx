@@ -15,7 +15,7 @@ const LangSwitcher = () => {
     <Container className="mt-3">
       <Row>
         <Col className="d-flex justify-content-end align-items-center">
-          <span className="text-uppercase">{lang}</span>
+          <span className="text-uppercase text-white">{lang}</span>
           {arrayLang.map((lang) => {
             return (
               <Button
