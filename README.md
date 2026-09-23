@@ -8,7 +8,7 @@
 
 # Gianni Bussoletti • Personal Portfolio
 
-> Portfolio personale in stile Windows 95: sviluppatore full-stack junior,
+> Portfolio personale in stile Windows 9️⃣5️⃣
 > con una selezione di progetti front-end e back-end, sezione "Su di me"
 > e contatti diretti. Disponibile in italiano e inglese.
 
