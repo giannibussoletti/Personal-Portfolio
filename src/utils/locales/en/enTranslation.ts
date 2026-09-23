@@ -11,7 +11,7 @@ export default {
       "footer.gotIdea": "Got a project in mind? Let's talk!",
       "footer.contactMe": "Contact Me!",
       "footer.madeWith":
-        "Portfolio made with <strong>React</strong>,<strong>TypeScript</strong> e <strong>Bootstrap</strong>.",
+        "Made with love ❤️ in <strong>React</strong>, <strong>TypeScript</strong> and <strong>Bootstrap</strong>.",
     },
   },
 }

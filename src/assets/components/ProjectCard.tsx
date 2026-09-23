@@ -16,7 +16,7 @@ const ProjectCard = ({ title, stack, imgLink, textBack, repoLink, demoLink }: Pr
         {imgLink ? (
           <Card.Img className="rounded-0" src={imgLink} />
         ) : (
-          textBack?.map((text) => <p>{text}</p>)
+          textBack?.map((text) => <p key={text}>{text}</p>)
         )}
       </Card.Body>
       <Card.Footer>
