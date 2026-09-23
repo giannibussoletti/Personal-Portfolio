@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 import { Trans } from "react-i18next"
 import { gitLink } from "../variables"
 const Footer = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   return (
     <Row className="m-0 mb-4 mb-lg-0">
@@ -48,8 +48,8 @@ const Footer = () => {
           </Col>
           <Col xs={12} className="mt-3 d-lg-flex justify-content-lg-center">
             <p className="mb-0 me-lg-3">
-              <Trans i18nKey="footer.madeWith">
-                Portfolio realizzato con <strong>React</strong>,<strong>TypeScript</strong> e{" "}
+              <Trans key={i18n.language} i18nKey="footer.madeWith">
+                Creato con amore ❤️ in <strong>React</strong>,<strong>TypeScript</strong> e{" "}
                 <strong>Bootstrap</strong>.
               </Trans>
               (

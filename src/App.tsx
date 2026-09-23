@@ -91,6 +91,7 @@ const App = () => {
             {projectArray.map((pr, i) => {
               return (
                 <Col
+                  key={pr.title}
                   xs={12}
                   lg={i === projectArray.length - 1 ? 12 : 6}
                   className={i === projectArray.length - 1 ? "mb-4 mb-lg-0 mt-3" : "mb-4 mb-lg-0"}>
