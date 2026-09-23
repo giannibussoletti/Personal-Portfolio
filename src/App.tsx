@@ -25,6 +25,7 @@ const renderTooltip = (value: string) => {
 
 const App = () => {
   const { t } = useTranslation()
+
   return (
     <>
       <Container className="mt-5 px-3 mb-5">
@@ -87,17 +88,18 @@ const App = () => {
               <WindowButtons />
             </Col>
           </Row>
-          <Row className="window-bg px-1 pt-3 p-xl-3 m-0" style={{ backgroundColor: "#737373" }}>
+          <Row
+            xs={1}
+            xl={3}
+            className="window-bg px-1 pt-3 p-xl-3 m-0"
+            style={{ backgroundColor: "#737373" }}>
             {projectArray.map((pr, i) => {
               return (
-                <Col
-                  key={pr.title}
-                  xs={12}
-                  lg={i === projectArray.length - 1 ? 12 : 6}
-                  className={i === projectArray.length - 1 ? "mb-4 mb-lg-0 mt-3" : "mb-4 mb-lg-0"}>
+                <Col key={pr.title} className="mb-4 mb-xl-0">
                   <ProjectCard
                     key={i}
                     title={pr.title}
+                    description={pr.description}
                     stack={pr.stack}
                     repoLink={pr.repoLink}
                     imgLink={pr.imgLink}
