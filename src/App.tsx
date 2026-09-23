@@ -84,7 +84,7 @@ const App = () => {
         <Col className="window-style p-0 mb-4">
           <Row className="window-title m-0">
             <Col className="d-flex align-items-center justify-content-between">
-              <h3>{t("titles.project")}</h3>
+              <h3>{t("project.titles")}</h3>
               <WindowButtons />
             </Col>
           </Row>
