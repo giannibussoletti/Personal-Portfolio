@@ -12,7 +12,8 @@
 
 body {
   font-family: "Space Mono", monospace;
-  background: linear-gradient(180deg, #008080 0%, #006666 100%);
+  // background: linear-gradient(180deg, #008080 0%, #006666 100%);
+  background: repeating-linear-gradient(45deg, #008080, #008080 10px, #007373 10px, #007373 20px);
   color: var(--main-black);
 }
 
@@ -118,5 +119,15 @@ h3 {
     background-color: var(--window-blue) !important;
     border: 2px inset var(--window-blue) !important;
     color: var(--main-white) !important;
+  }
+}
+
+.card-list {
+  margin-bottom: 0.5rem;
+  & li {
+    margin-bottom: 1rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }

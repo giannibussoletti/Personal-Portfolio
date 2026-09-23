@@ -58,6 +58,10 @@ export const arrayLang: LanguageArrayType[] = [
 export const projectArray: ProjectType[] = [
   {
     title: "Adastra Cinema",
+    description: {
+      it: "Sito per la gestione di una catena di cinema, dalla scelta del film all'acquisto del biglietto.",
+      en: "A website for managing a cinema chain, from choosing a film to buying the ticket.",
+    },
     stack: [strHTML5, strCSS, strReact, strTS, strBootstrap, strSASS, strJava, strPgSQL, strSpring],
     imgLink: optLink + "adastra_xlbkgq.png",
     repoLink: gitLink + "FE-AdAdstra-Capstone-EPICODE",
@@ -65,6 +69,10 @@ export const projectArray: ProjectType[] = [
   },
   {
     title: "Netflix Clone",
+    description: {
+      it: "Replica dell'interfaccia Netflix con React e TypeScript, refactoring completo di una versione precedente in JavaScript.",
+      en: "Netflix interface replica with React and TypeScript, a full refactor of an earlier JavaScript version.",
+    },
     stack: [strHTML5, strCSS, strReact, strTS, strBootstrap, strSASS],
     imgLink: optLink + "netflix_hmdc3p.png",
     repoLink: gitLink + "Netflix-Clone-Refactor-JS-to-TS",
@@ -72,15 +80,30 @@ export const projectArray: ProjectType[] = [
   },
   {
     title: "Event Management",
+    description: {
+      it: "API REST per la gestione di eventi e prenotazioni, creato con con Spring Boot.",
+      en: "REST API for managing events and bookings, built with Spring Boot.",
+    },
     stack: [strJava, strPgSQL, strSpring],
     repoLink: gitLink + "Gestore-per-la-Creazione-e-la-Prenotazione-di-Eventi",
-    textBack: [
-      "Client → Postman / frontend",
-      "Security → Spring Security + JWT",
-      "REST controllers → events, bookings, users",
-      "Service → business logic",
-      "Repository → Spring Data JPA",
-      "Database → PostgreSQL",
-    ],
+    textBack: {
+      it: [
+        "Client → Postman / frontend",
+        "Sicurezza → Spring Security + JWT",
+        "Controller REST → eventi, prenotazioni, utenti",
+        "Service → logica di business",
+        "Repository → Spring Data JPA",
+        "Database → PostgreSQL",
+      ],
+
+      en: [
+        "Client → Postman / frontend",
+        "Security → Spring Security + JWT",
+        "REST controllers → events, bookings, users",
+        "Service → business logic",
+        "Repository → Spring Data JPA",
+        "Database → PostgreSQL",
+      ],
+    },
   },
 ]
