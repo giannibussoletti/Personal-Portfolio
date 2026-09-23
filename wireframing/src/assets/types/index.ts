@@ -19,3 +19,12 @@ export type StackComponentType = {
   array: StackIconTypes[]
   title: string
 }
+
+export type ProjectType = {
+  title: string
+  stack: IconDefinition[]
+  imgLink?: string
+  textBack?: string[]
+  repoLink: string
+  demoLink?: string
+}
