@@ -10,7 +10,7 @@ import { Container, Row, Col, Image, Tooltip, OverlayTrigger } from "react-boots
 
 import { useTranslation } from "react-i18next"
 
-import { socialIcon, stackIconBack, stackIconFront } from "./assets/arrays"
+import { projectArray, socialIcon, stackIconBack, stackIconFront } from "./assets/arrays"
 import { iconSize } from "./assets/variables"
 
 import LangSwitcher from "./assets/components/LangSwitcher"
@@ -27,7 +27,6 @@ const App = () => {
   const { t } = useTranslation()
   return (
     <>
-      <LangSwitcher />
       <Container className="mt-5 px-3 mb-5">
         <Row>
           <Col className="d-flex justify-content-center mb-4">
@@ -38,6 +37,7 @@ const App = () => {
               style={{ maxWidth: "200px" }}
             />
           </Col>
+          <LangSwitcher />
         </Row>
         <Row>
           <Col className="text-center text-light">
@@ -87,9 +87,24 @@ const App = () => {
               <WindowButtons />
             </Col>
           </Row>
-          <Row className="window-bg p-3 m-0">
-            {stackIconBack.map((_pr, i) => {
-              return <ProjectCard key={i} />
+          <Row className="window-bg px-1 pt-3 p-xl-3 m-0" style={{ backgroundColor: "#737373" }}>
+            {projectArray.map((pr, i) => {
+              return (
+                <Col
+                  xs={12}
+                  lg={i === projectArray.length - 1 ? 12 : 6}
+                  className={i === projectArray.length - 1 ? "mb-4 mb-lg-0 mt-3" : "mb-4 mb-lg-0"}>
+                  <ProjectCard
+                    key={i}
+                    title={pr.title}
+                    stack={pr.stack}
+                    repoLink={pr.repoLink}
+                    imgLink={pr.imgLink}
+                    textBack={pr.textBack}
+                    demoLink={pr.demoLink}
+                  />
+                </Col>
+              )
             })}
           </Row>
         </Col>
