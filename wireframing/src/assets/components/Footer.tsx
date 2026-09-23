@@ -4,6 +4,7 @@ import { socialIcon } from "../arrays"
 import WindowButtons from "./WindowButtons"
 import { useTranslation } from "react-i18next"
 import { Trans } from "react-i18next"
+import { gitLink } from "../variables"
 const Footer = () => {
   const { t } = useTranslation()
 
@@ -51,6 +52,11 @@ const Footer = () => {
                 Portfolio realizzato con <strong>React</strong>,<strong>TypeScript</strong> e{" "}
                 <strong>Bootstrap</strong>.
               </Trans>
+              (
+              <a target="_blank" href={gitLink + "Personal-Portfolio"}>
+                repo
+              </a>
+              )
             </p>
 
             <p className="mb-0">
