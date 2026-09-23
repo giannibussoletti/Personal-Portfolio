@@ -71,14 +71,14 @@ export const projectArray: ProjectType[] = [
     demoLink: "https://netflixcloneportfolio.vercel.app/",
   },
   {
-    title: "Gestore eventi",
+    title: "Event Management",
     stack: [strJava, strPgSQL, strSpring],
     repoLink: gitLink + "Gestore-per-la-Creazione-e-la-Prenotazione-di-Eventi",
     textBack: [
       "Client → Postman / frontend",
-      "Sicurezza → Spring Security + JWT",
-      "Controller REST → eventi, prenotazioni, utenti",
-      "Service → logica di business",
+      "Security → Spring Security + JWT",
+      "REST controllers → events, bookings, users",
+      "Service → business logic",
       "Repository → Spring Data JPA",
       "Database → PostgreSQL",
     ],
