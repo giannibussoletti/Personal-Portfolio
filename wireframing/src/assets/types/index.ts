@@ -3,6 +3,7 @@ import type { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 export type StackIconTypes = {
   icon: IconDefinition
   value: string
+  color?: string
 }
 
 export type SocialLinkIconTypes = StackIconTypes & {
@@ -22,7 +23,7 @@ export type StackComponentType = {
 
 export type ProjectType = {
   title: string
-  stack: IconDefinition[]
+  stack: string[]
   imgLink?: string
   textBack?: string[]
   repoLink: string

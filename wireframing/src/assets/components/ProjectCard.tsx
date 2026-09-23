@@ -2,6 +2,9 @@ import { Col, Card, Row, Button } from "react-bootstrap"
 import WindowButtons from "./WindowButtons"
 import type { ProjectType } from "../types"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { stackIconBack, stackIconFront } from "../arrays"
+
+const allStackIcon = [...stackIconFront, ...stackIconBack]
 
 const ProjectCard = ({ title, stack, imgLink, textBack, repoLink, demoLink }: ProjectType) => {
   return (
@@ -18,12 +21,21 @@ const ProjectCard = ({ title, stack, imgLink, textBack, repoLink, demoLink }: Pr
       </Card.Body>
       <Card.Footer>
         <Row>
-          <Col>
+          <Col className="py-2 window-bg">
             <p className="m-0">
               Stack:
-              {stack.map((icon) => (
-                <FontAwesomeIcon icon={icon} />
-              ))}
+              {stack.map((names) => {
+                const icon = allStackIcon.find((i) => i.value === names)
+                return icon ? (
+                  <FontAwesomeIcon
+                    className="me-1"
+                    key={names}
+                    icon={icon.icon}
+                    size="xl"
+                    style={{ color: icon.color }}
+                  />
+                ) : null
+              })}
             </p>
           </Col>
         </Row>
