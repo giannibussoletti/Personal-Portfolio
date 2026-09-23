@@ -18,7 +18,11 @@ const StackWindow = ({ array, title }: StackComponentType) => {
           {array.map((stackIcon, i) => {
             return (
               <Col key={stackIcon.value + i} className="my-2">
-                <FontAwesomeIcon size={iconSize} icon={stackIcon.icon} />
+                <FontAwesomeIcon
+                  size={iconSize}
+                  icon={stackIcon.icon}
+                  style={{ color: stackIcon.color }}
+                />
                 {stackIcon.value}
               </Col>
             )

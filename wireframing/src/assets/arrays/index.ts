@@ -13,22 +13,35 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import type { LanguageArrayType, ProjectType, SocialLinkIconTypes, StackIconTypes } from "../types"
 import { faEnvelope, faLeaf } from "@fortawesome/free-solid-svg-icons"
-import { optLink, gitLink } from "../variables"
+import {
+  optLink,
+  gitLink,
+  strHTML5,
+  strCSS,
+  strSASS,
+  strTS,
+  strJS,
+  strReact,
+  strBootstrap,
+  strJava,
+  strSpring,
+  strPgSQL,
+} from "../variables"
 
 export const stackIconFront: StackIconTypes[] = [
-  { icon: faHtml5, value: "HTML5" },
-  { icon: faCss, value: "CSS" },
-  { icon: faSass, value: "SASS" },
-  { icon: faTypescript, value: "TypeScript" },
-  { icon: faSquareJs, value: "JavaScript" },
-  { icon: faReact, value: "React" },
-  { icon: faBootstrap, value: "Bootstrap" },
+  { icon: faHtml5, value: strHTML5, color: "#ec6231" },
+  { icon: faCss, value: strCSS, color: "#639" },
+  { icon: faSass, value: strSASS, color: "#cc6699" },
+  { icon: faTypescript, value: strTS, color: "#3178C6" },
+  { icon: faSquareJs, value: strJS, color: "#efd81c" },
+  { icon: faReact, value: strReact, color: "#61dafb" },
+  { icon: faBootstrap, value: strBootstrap, color: "#7952b3" },
 ]
 
 export const stackIconBack: StackIconTypes[] = [
-  { icon: faJava, value: "Java" },
-  { icon: faLeaf, value: "Spring Boot" },
-  { icon: faPostgresql, value: "PostgreSQL" },
+  { icon: faJava, value: strJava, color: "#1f6eb1" },
+  { icon: faLeaf, value: strSpring, color: "#6cb52d" },
+  { icon: faPostgresql, value: strPgSQL, color: "#000" },
 ]
 
 export const socialIcon: SocialLinkIconTypes[] = [
@@ -45,21 +58,21 @@ export const arrayLang: LanguageArrayType[] = [
 export const projectArray: ProjectType[] = [
   {
     title: "Adastra Cinema",
-    stack: [faBootstrap],
+    stack: [strHTML5, strCSS, strReact, strTS, strBootstrap, strSASS, strJava, strPgSQL, strSpring],
     imgLink: optLink + "adastra_xlbkgq.png",
     repoLink: gitLink + "FE-AdAdstra-Capstone-EPICODE",
     demoLink: "https://adastracinema.it/",
   },
   {
     title: "Netflix Clone",
-    stack: [faBootstrap],
+    stack: [strHTML5, strCSS, strReact, strTS, strBootstrap, strSASS],
     imgLink: optLink + "netflix_hmdc3p.png",
     repoLink: gitLink + "Netflix-Clone-Refactor-JS-to-TS",
     demoLink: "https://netflixcloneportfolio.vercel.app/",
   },
   {
     title: "Gestore eventi",
-    stack: [faBootstrap],
+    stack: [strJava, strPgSQL, strSpring],
     repoLink: gitLink + "Gestore-per-la-Creazione-e-la-Prenotazione-di-Eventi",
     textBack: [
       "Client → Postman / frontend",
