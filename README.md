@@ -6,7 +6,7 @@
 └─────────────────────────────────────────────────┘
 ```
 
-# Gianni Bussoletti • Personal Portfolio
+# Gianni Bussoletti • Personal Portfolio [![Netlify Status](https://api.netlify.com/api/v1/badges/e8060c6a-e66a-42b4-8205-71fba2b06bd3/deploy-status)](https://app.netlify.com/projects/giannibussoletti/deploys)
 
 > Portfolio personale in stile Windows 95
 > con una selezione di progetti front-end e back-end, sezione "Su di me"
