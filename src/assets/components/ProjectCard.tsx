@@ -15,7 +15,7 @@ const ProjectCard = ({
   demoLink,
 }: ProjectType) => {
   const { i18n } = useTranslation()
-  const lang: Lang = i18n.language as Lang
+  const lang: Lang = (i18n.resolvedLanguage as Lang) ?? "it"
   const allStackIcon = [...stackIconFront, ...stackIconBack]
 
   return (
@@ -25,11 +25,13 @@ const ProjectCard = ({
       </Card.Header>
       <Card.Body className={textBack ? "bg-white" : "p-0"}>
         {imgLink ? (
-          <Card.Img className="rounded-0" src={imgLink} />
+          <Card.Img className="rounded-0" loading="lazy" src={imgLink} alt={"project" + title} />
         ) : (
           <ul className="ps-3 card-list">
             {" "}
-            {textBack && textBack[lang].map((text) => <li key={text}>{text}</li>)}
+            {textBack?.[lang]?.map((text) => (
+              <li key={text}>{text}</li>
+            ))}
           </ul>
         )}
       </Card.Body>
