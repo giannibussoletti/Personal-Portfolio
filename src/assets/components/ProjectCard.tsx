@@ -63,6 +63,7 @@ const ProjectCard = ({
         <Row xs={demoLink ? 2 : 1} className=" justify-content-center">
           <Col className="my-2 p-0 px-1">
             <Button
+              aria-label="repository link"
               variant="light"
               className="w-100 btn-projects"
               onClick={() => window.open(repoLink)}>
@@ -72,6 +73,7 @@ const ProjectCard = ({
           {demoLink && (
             <Col className="my-2 p-0 px-1">
               <Button
+                aria-label="demo project link"
                 variant="light"
                 className="w-100 btn-projects"
                 onClick={() => window.open(demoLink)}>
