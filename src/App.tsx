@@ -34,8 +34,10 @@ const App = () => {
             <Image
               roundedCircle
               className="border border-4 border-light"
-              src="./proPic.png"
-              style={{ maxWidth: "200px" }}
+              src="./proPic.webp"
+              alt="Foto di Gianni Bussoletti"
+              width={200}
+              height={200}
             />
           </Col>
           <LangSwitcher />
