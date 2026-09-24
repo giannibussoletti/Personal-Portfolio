@@ -25,7 +25,7 @@ const ProjectCard = ({
       </Card.Header>
       <Card.Body className={textBack ? "bg-white" : "p-0"}>
         {imgLink ? (
-          <Card.Img className="rounded-0" src={imgLink} />
+          <Card.Img className="rounded-0" loading="lazy" src={imgLink} alt={"project" + title} />
         ) : (
           <ul className="ps-3 card-list">
             {" "}
