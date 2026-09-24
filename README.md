@@ -37,6 +37,8 @@ I testi sono gestiti tramite `react-i18next`, con i file di traduzione
 organizzati per lingua. Il cambio lingua è disponibile tramite l'apposito
 selettore nell'interfaccia.
 
+---
+🔗 Link: [giannibussoletti.it](https://giannibussoletti.it)
 ```
 ┌───────────────────────────────────────┐
 │ Fine del documento.                   │
