@@ -1,12 +1,10 @@
-import { useState } from "react"
 import { Button, Col, Container, Row } from "react-bootstrap"
 import { useTranslation } from "react-i18next"
 import { arrayLang } from "../arrays"
 
 const LangSwitcher = () => {
   const { i18n } = useTranslation()
-  const [lang, setLang] = useState(i18n.language)
-
+  const lang = i18n.resolvedLanguage ?? "it"
   const changeLang = (code: string) => {
     i18n.changeLanguage(code)
   }
@@ -24,7 +22,6 @@ const LangSwitcher = () => {
                 className="p-0 mx-1 bg-transparent border-0 fs-3"
                 onClick={() => {
                   changeLang(lang.code)
-                  setLang(lang.code)
                 }}>
                 {lang.flag}
               </Button>
