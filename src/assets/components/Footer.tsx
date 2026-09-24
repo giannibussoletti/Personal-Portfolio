@@ -29,7 +29,12 @@ const Footer = () => {
               variant="light"
               className="btn-projects d-flex align-items-center"
               onClick={() => window.open(socialIcon[2].url)}>
-              <Image className="me-2" src="./contact.png" style={{ maxWidth: "35px" }} />
+              <Image
+                className="me-2"
+                src="./contact.png"
+                alt="conctact-icon"
+                style={{ maxWidth: "35px" }}
+              />
               <span>{t("footer.contactMe")}</span>
             </Button>
           </Col>
@@ -59,11 +64,7 @@ const Footer = () => {
               )
             </p>
 
-            <p className="mb-0">
-              Gianni Bussoletti –{" "}
-              <span style={{ fontFamily: "Arial, Helvetica, sans-serif" }}>&#169; </span>
-              {new Date().getFullYear().toString()}
-            </p>
+            <p className="mb-0">Gianni Bussoletti – {new Date().getFullYear().toString()}</p>
           </Col>
         </Row>
       </Col>
