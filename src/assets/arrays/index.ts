@@ -57,7 +57,7 @@ export const arrayLang: LanguageArrayType[] = [
 
 export const projectArray: ProjectType[] = [
   {
-    title: "Adastra Cinema",
+    title: "Adastra Cinema (WIP)",
     description: {
       it: "Sito per la gestione di una catena di cinema, dalla scelta del film all'acquisto del biglietto.",
       en: "A website for managing a cinema chain, from choosing a film to buying the ticket.",
