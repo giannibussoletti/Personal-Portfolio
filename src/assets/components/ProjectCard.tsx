@@ -15,7 +15,7 @@ const ProjectCard = ({
   demoLink,
 }: ProjectType) => {
   const { i18n } = useTranslation()
-  const lang: Lang = i18n.language as Lang
+  const lang: Lang = (i18n.resolvedLanguage as Lang) ?? "it"
   const allStackIcon = [...stackIconFront, ...stackIconBack]
 
   return (
@@ -29,7 +29,9 @@ const ProjectCard = ({
         ) : (
           <ul className="ps-3 card-list">
             {" "}
-            {textBack && textBack[lang].map((text) => <li key={text}>{text}</li>)}
+            {textBack?.[lang]?.map((text) => (
+              <li key={text}>{text}</li>
+            ))}
           </ul>
         )}
       </Card.Body>
