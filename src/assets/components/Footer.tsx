@@ -30,10 +30,11 @@ const Footer = () => {
               className="btn-projects d-flex align-items-center"
               onClick={() => window.open(socialIcon[2].url)}>
               <Image
+                width={35}
+                height={26}
                 className="me-2"
                 src="./contact.png"
                 alt="conctact-icon"
-                style={{ maxWidth: "35px" }}
               />
               <span>{t("footer.contactMe")}</span>
             </Button>
