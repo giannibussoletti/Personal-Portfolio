@@ -30,7 +30,6 @@ const ProjectCard = ({
             loading="lazy"
             src={imgLink}
             width={588}
-            height={331}
             alt={"project" + title}
           />
         ) : (
