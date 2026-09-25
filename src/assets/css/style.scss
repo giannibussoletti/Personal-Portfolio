@@ -6,6 +6,46 @@
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot";
+<<<<<<< HEAD
+=======
+
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/tooltip";
+
+@import "bootstrap/scss/utilities/api";
+
+/* space-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/space-mono-v17-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* space-mono-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Space Mono";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/fonts/space-mono-v17-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* space-mono-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/space-mono-v17-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+>>>>>>> release/1.0.2
 
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
@@ -26,7 +66,6 @@
 
 body {
   font-family: "Space Mono", monospace;
-  // background: linear-gradient(180deg, #008080 0%, #006666 100%);
   background: linear-gradient(#008080 0%, #005d5d 100%);
   color: var(--main-black);
 }
