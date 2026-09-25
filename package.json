@@ -41,7 +41,8 @@
     "sass-embedded": "^1.104.1",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "vite-plugin-beasties": "^0.5.4"
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true
