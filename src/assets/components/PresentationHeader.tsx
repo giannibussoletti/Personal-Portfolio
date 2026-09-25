@@ -39,6 +39,11 @@ const PresentationHeader = () => {
                 delay={{ show: 250, hide: 400 }}
                 placement="bottom">
                 <FontAwesomeIcon
+                  aria-label={
+                    social.value === "info@giannibussoletti.it"
+                      ? "invia una mail a info@giannibussoletti.it"
+                      : "collegamento a " + social.value
+                  }
                   onClick={() => window.open(social.url)}
                   className="mt-1 mb-4 hand-cursor"
                   size={iconSize}
