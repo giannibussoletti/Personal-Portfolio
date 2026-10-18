@@ -1,3 +1,5 @@
+[English](README.md) | **Italiano**
+
 ```
 ┌─────────────────────────────────────────────────┐
 │ Personal-Portfolio.exe                          │
